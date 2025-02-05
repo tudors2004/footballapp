@@ -1,10 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
+    reactStrictMode: true,
     images: {
-        domains: ['media.api-sports.io'],
-    }
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'media.api-sports.io',
+            },
+        ],
+    },
 };
 
 export default nextConfig;
